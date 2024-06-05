@@ -18,6 +18,17 @@ sap.ui.define([
                 var oModel = new JSONModel(Device);
                 oModel.setDefaultBindingMode("OneWay");
                 return oModel;
-        }
+        },
+            test : () => {
+                const oData = {
+                    "name": "John",
+                    "lastName" : "Doe",
+                    "age": 34
+                }
+                var oModel = new JSONModel(oData);
+                //oModel.setDefaultBindingMode("OneWay");
+                return oModel;
+                
+            }
     };
 });
