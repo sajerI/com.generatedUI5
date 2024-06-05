@@ -1,0 +1,52 @@
+<mvc:View controllerName="com.myorg.generatedUI5project.controller.MainView"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+    <!--<MessagePage id="msgPage" showHeader="false"
+    description="More content to come"
+    text="{i18n>moreToCome}"
+    icon="sap-icon://home" />
+            <content />  -->
+    	<Table
+				selectionChange="handleSelectionChange"
+				inset="false"
+				id="idProductsTable">
+				<headerToolbar>
+					<OverflowToolbar id="idCrumbToolbar" >
+						<Breadcrumbs id="breadcrumb" />
+					</OverflowToolbar>
+				</headerToolbar>
+				<infoToolbar>
+					<OverflowToolbar id="ovflTlbar" visible="{Order>/hasCounts}">
+						<Label text="{Order>/count} Products Selected" />
+					</OverflowToolbar>
+				</infoToolbar>
+				<columns>
+					<Column
+						width="12em">
+						<Text text="Name" />
+					</Column>
+					<Column
+						id="dimensionsColumn"
+						minScreenWidth="Tablet"
+						demandPopin="true"
+						hAlign="End"
+						visible="true">
+						<Text text="Dimensions" />
+					</Column>
+					<Column
+						id="weightColumn"
+						minScreenWidth="Tablet"
+						demandPopin="true"
+						hAlign="Center"
+						visible="true">
+						<Text text="Weight" />
+					</Column>
+					<Column
+						hAlign="End">
+						<Text text="Price" />
+					</Column>
+				</columns>
+			</Table>
+    </Page>
+</mvc:View>
